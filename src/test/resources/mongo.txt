@@ -1,0 +1,32 @@
+mongod --auth --port 27017 
+mongo --port 27017 -u "admin" -p "password123" --authenticationDatabase "admin"
+
+use admin
+db.createUser(
+  {
+    user: "admin",
+    pwd: "password123",
+    roles: [ { role: "root", db: "admin" } ]
+  }
+);
+exit; 
+
+
+db.createUser({
+  user: "user123",
+  pwd: "password123",
+  roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+})
+
+db.grantRolesToUser('user123',[{ role: "root", db: "admin" }])
+
+
+1) reporting -- allure; report portal DONE
+2) message in case of errors postman 
+3) setup - category + books DONE
+4) filter for books - lambda (by athor, name) DONE
+5) lamda
+
+
+
+
