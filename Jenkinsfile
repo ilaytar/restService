@@ -6,6 +6,11 @@ pipeline {
         sh 'gradle war'
       }
     }
+    stage('docker-compose') {
+      steps {
+        sh 'docker-compose --version'
+      }
+    }
   }
   tools {
     gradle 'gradle'
