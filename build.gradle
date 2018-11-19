@@ -31,7 +31,13 @@ buildscript {
 
 cargo {
     containerId = 'tomcat'
-    port = 8084
+    port = 8080
+
+    remote {
+        hostname = 'localhost'
+        username = 'admin'
+        password = 'admin'
+    }
 
 //    local {
 //        homeDir = new File('src\\main\\resources\\apache-tomcat-9.0.12')
