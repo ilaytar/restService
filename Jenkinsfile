@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('useGradle') {
+    stage('war') {
       steps {
-        sh 'gradle --version'
+        sh 'gradle war'
       }
     }
   }
