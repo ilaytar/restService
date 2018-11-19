@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+      docker {
+          image 'tomcat:9.0.13-jre8'
+          }
+      }
   stages {
     stage('war') {
       steps {
