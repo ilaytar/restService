@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'tomcat:9.0.13-jre8'
+      image 'tomcat'
     }
 
   }
