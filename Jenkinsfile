@@ -6,9 +6,9 @@ pipeline {
         sh 'gradle war'
       }
     }
-    stage('docker-compose') {
+    stage('deploy') {
       steps {
-        sh 'docker-compose --version'
+        sh 'gradle cargoDeployRemote'
       }
     }
   }
