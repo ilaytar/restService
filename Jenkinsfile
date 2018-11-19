@@ -1,10 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('war') {
+    stage('useGradle') {
       steps {
-        tool 'gradle'
-        sh 'gradle war'
+        tool(name: 'gradle', type: 'gradle')
+        sh 'gradle -version'
       }
     }
   }
