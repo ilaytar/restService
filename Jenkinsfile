@@ -1,13 +1,13 @@
 pipeline {
   agent any
-  tools {
-    gradle 'gradle'
-  }
   stages {
-    stage('useGradle') {
+    stage('war') {
       steps {
-        sh 'gradle -version'
+        sh 'gradle war'
       }
     }
+  }
+  tools {
+    gradle 'gradle'
   }
 }
