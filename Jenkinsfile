@@ -6,6 +6,11 @@ pipeline {
         sh 'gradle war'
       }
     }
+    stage('deploy') {
+      steps {
+        sh 'gradle cargoDeployRemote'
+      }
+    }
   }
   tools {
     gradle 'gradle'
